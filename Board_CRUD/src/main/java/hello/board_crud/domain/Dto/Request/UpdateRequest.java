@@ -19,5 +19,5 @@ public class UpdateRequest {
 
     @Size(min = 1, max = 10000)
     @NotBlank
-    private String Content;
+    private String content;
 }

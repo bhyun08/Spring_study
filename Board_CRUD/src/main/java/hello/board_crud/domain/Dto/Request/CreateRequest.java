@@ -17,9 +17,9 @@ public class CreateRequest {
 
     @Size(min = 1, max = 16)
     @NotBlank
-    private String Name;
+    private String name;
 
     @Size(min = 1, max = 10000)
     @NotBlank
-    private String Content;
+    private String content;
 }

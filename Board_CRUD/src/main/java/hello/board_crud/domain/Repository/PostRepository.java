@@ -8,5 +8,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface PostRepository extends JpaRepository<PostEntity, Long> {
-    Page<PostEntity> search(Pageable pageable);
+    Page<PostEntity> findAll(Pageable pageable);
 }
