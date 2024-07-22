@@ -1,4 +1,4 @@
-package hello.board_crud.domain.Dto;
+package hello.board_crud.domain.Dto.Request;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;

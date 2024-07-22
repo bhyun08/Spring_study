@@ -1,6 +1,6 @@
 package hello.board_crud.domain.Service;
 
-import hello.board_crud.domain.Dto.CreateRequest;
+import hello.board_crud.domain.Dto.Request.CreateRequest;
 import hello.board_crud.domain.Entity.PostEntity;
 import hello.board_crud.domain.Repository.PostRepository;
 import lombok.RequiredArgsConstructor;
