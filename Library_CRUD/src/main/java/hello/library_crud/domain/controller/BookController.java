@@ -45,7 +45,7 @@ public class BookController {
     }
 
     @GetMapping("/title")
-    public List<BookEntity> titleSearch(@RequestBody SearchRequest searchRequest) {
-        return bookSearchService.search(searchRequest);
+    public List<BookEntity> titleSearch(@RequestBody TitleRequest titleRequest) {
+        return bookSearchTitleService.searchTitle(titleRequest);
     }
 }

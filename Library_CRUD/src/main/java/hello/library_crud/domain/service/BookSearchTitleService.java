@@ -14,7 +14,7 @@ import java.util.List;
 public class BookSearchTitleService {
     private final BookRepository bookRepository;
 
-    public List<BookEntity> findByTitle(TitleRequest titleRequest) {
+    public List<BookEntity> searchTitle(TitleRequest titleRequest) {
         return bookRepository.findByTitle(titleRequest.getKeyword());
     }
 }
