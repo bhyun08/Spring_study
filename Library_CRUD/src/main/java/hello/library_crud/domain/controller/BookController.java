@@ -17,6 +17,7 @@ public class BookController {
     private final BookUpdateService bookUpdateService;
     private final BookDeleteService bookDeleteService;
     private final BookSearchService bookSearchService;
+    private final BookSearchTitleService bookSearchTitleService;
 
     @PostMapping("/register")
     public void register(@RequestBody RegisterRequest registerRequest) {
@@ -40,6 +41,11 @@ public class BookController {
 
     @GetMapping("/author")
     public List<BookEntity> authorSearch(@RequestBody SearchRequest searchRequest) {
+        return bookSearchService.search(searchRequest);
+    }
+
+    @GetMapping("/title")
+    public List<BookEntity> titleSearch(@RequestBody SearchRequest searchRequest) {
         return bookSearchService.search(searchRequest);
     }
 }
