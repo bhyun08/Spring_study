@@ -1,14 +1,9 @@
 package hello.user_crud.domain.auth.controller;
 
-import hello.user_crud.domain.auth.dto.request.CheckRequest;
-import hello.user_crud.domain.auth.dto.request.DeleteRequest;
-import hello.user_crud.domain.auth.dto.request.SignUpRequest;
-import hello.user_crud.domain.auth.dto.request.UpdateRequest;
+import hello.user_crud.domain.auth.dto.request.*;
 import hello.user_crud.domain.auth.dto.response.CheckResponse;
-import hello.user_crud.domain.auth.service.CheckService;
-import hello.user_crud.domain.auth.service.DeleteService;
-import hello.user_crud.domain.auth.service.SignUpService;
-import hello.user_crud.domain.auth.service.UpdateService;
+import hello.user_crud.domain.auth.dto.response.LoginResponse;
+import hello.user_crud.domain.auth.service.*;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
@@ -19,6 +14,7 @@ public class UserController {
     private final CheckService checkService;
     private final UpdateService updateService;
     private final DeleteService deleteService;
+    private final LoginService loginService;
 
     @PostMapping("/signup")
     public void signUp(@RequestBody SignUpRequest signUpRequest) {
@@ -38,5 +34,10 @@ public class UserController {
     @DeleteMapping("/delete")
     public void delete(@RequestBody DeleteRequest deleteRequest) {
         deleteService.delete(deleteRequest);
+    }
+
+    @PostMapping("/login")
+    public LoginResponse login(@RequestBody LoginRequest loginRequest) {
+        return loginService.login(loginRequest);
     }
 }
