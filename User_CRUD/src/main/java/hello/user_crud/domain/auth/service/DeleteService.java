@@ -13,7 +13,7 @@ public class DeleteService {
 
     public void delete(DeleteRequest deleteRequest) {
         User user = userRepository.findById(deleteRequest.getId())
-                .orElseThrow(()-> new RuntimeException("User not found"));
+                .orElseThrow(()-> new IllegalArgumentException("User not found"));
         userRepository.delete(user);
     }
 }
