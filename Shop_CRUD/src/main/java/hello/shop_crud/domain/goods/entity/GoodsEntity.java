@@ -19,8 +19,8 @@ public class GoodsEntity {
     private String goodsName;
 
     @Column(nullable = false)
-    private int goodsDesc;
+    private String goodsDesc;
 
     @Column(nullable = false)
-    private String goodsExplan;
+    private int goodsPrice;
 }

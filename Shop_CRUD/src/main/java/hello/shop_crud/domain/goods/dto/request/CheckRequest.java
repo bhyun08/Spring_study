@@ -1,6 +1,5 @@
 package hello.shop_crud.domain.goods.dto.request;
 
-import jakarta.persistence.Column;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 import lombok.Getter;
@@ -10,16 +9,9 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-public class RegisterRequest {
+public class CheckRequest {
 
-    @Size(min = 2, max = 50)
+    @Size(min = 1)
     @NotBlank
-    private String goodsName;
-
-    @Size(max = 1000)
-    @NotBlank
-    private String goodsDesc;
-
-    @NotBlank
-    private int goodsPrice;
+    private Long id;
 }
