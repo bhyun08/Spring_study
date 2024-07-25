@@ -3,8 +3,10 @@ package hello.shop_crud.domain.goods.controller;
 import hello.shop_crud.domain.goods.dto.dto.response.CheckResponse;
 import hello.shop_crud.domain.goods.dto.request.CheckRequest;
 import hello.shop_crud.domain.goods.dto.request.RegisterRequest;
+import hello.shop_crud.domain.goods.dto.request.UpdateRequest;
 import hello.shop_crud.domain.goods.service.GoodsCheckService;
 import hello.shop_crud.domain.goods.service.GoodsRegisterService;
+import hello.shop_crud.domain.goods.service.GoodsUpdateService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,6 +16,7 @@ import org.springframework.web.bind.annotation.*;
 public class GoodsController {
     private final GoodsRegisterService goodsRegisterService;
     private final GoodsCheckService goodsCheckService;
+    private final GoodsUpdateService goodsUpdateService;
 
     @PostMapping("/register")
     public void register(@RequestBody  RegisterRequest registerRequest) {
@@ -23,5 +26,10 @@ public class GoodsController {
     @GetMapping("/check")
     public CheckResponse check(@RequestBody CheckRequest checkRequest) {
         return goodsCheckService.check(checkRequest);
+    }
+
+    @PatchMapping("/update")
+    public void update(@RequestBody UpdateRequest updateRequest) {
+        goodsUpdateService.update(updateRequest);
     }
 }
