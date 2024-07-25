@@ -19,7 +19,7 @@ public class GoodsEntity {
     private String goodsName;
 
     @Column(nullable = false)
-    private String goodsDesc;
+    private int goodsDesc;
 
     @Column(nullable = false)
     private String goodsExplan;
