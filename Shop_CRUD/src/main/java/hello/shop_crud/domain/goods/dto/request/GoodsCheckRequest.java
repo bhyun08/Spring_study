@@ -9,7 +9,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-public class DeleteRequest {
+public class GoodsCheckRequest {
 
     @Size(min = 1)
     @NotBlank

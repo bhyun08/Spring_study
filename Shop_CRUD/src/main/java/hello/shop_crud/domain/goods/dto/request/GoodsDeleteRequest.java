@@ -9,20 +9,9 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-public class UpdateRequest {
+public class GoodsDeleteRequest {
 
     @Size(min = 1)
     @NotBlank
     private Long id;
-
-    @Size(min = 2, max = 50)
-    @NotBlank
-    private String goodsName;
-
-    @Size(max = 1000)
-    @NotBlank
-    private String goodsDesc;
-
-    @NotBlank
-    private int goodsPrice;
 }

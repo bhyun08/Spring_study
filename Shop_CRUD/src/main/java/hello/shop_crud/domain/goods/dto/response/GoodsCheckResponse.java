@@ -7,7 +7,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @AllArgsConstructor
-public class CheckResponse {
+public class GoodsCheckResponse {
     private String goodsName;
     private String goodsDesc;
     private int goodsPrice;

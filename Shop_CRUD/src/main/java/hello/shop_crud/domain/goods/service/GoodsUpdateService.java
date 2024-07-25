@@ -1,6 +1,6 @@
 package hello.shop_crud.domain.goods.service;
 
-import hello.shop_crud.domain.goods.dto.request.UpdateRequest;
+import hello.shop_crud.domain.goods.dto.request.GoodsUpdateRequest;
 import hello.shop_crud.domain.goods.entity.GoodsEntity;
 import hello.shop_crud.domain.goods.repository.GoodsRepository;
 import jakarta.transaction.Transactional;
@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
 public class GoodsUpdateService {
     private final GoodsRepository goodsRepository;
 
-    public void update(UpdateRequest updateRequest) {
+    public void update(GoodsUpdateRequest updateRequest) {
         GoodsEntity goodsEntity = goodsRepository.findById(updateRequest.getId())
                 .orElseThrow(()-> new IllegalArgumentException("Goods Not Found"));
         goodsEntity.setGoodsName(updateRequest.getGoodsName());
