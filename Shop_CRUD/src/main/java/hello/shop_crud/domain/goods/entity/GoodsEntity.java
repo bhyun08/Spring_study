@@ -17,17 +17,17 @@ public class GoodsEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long GoodsId;
+    private Long id;  // 변경됨
 
     @Column(nullable = false)
-    private String goodsName;
+    private String name;  // 변경됨
 
     @Column(nullable = false)
-    private String goodsDesc;
+    private String description;  // 변경됨
 
     @Column(nullable = false)
-    private int goodsPrice;
+    private int price;
 
-    @ManyToMany(mappedBy = "goods")
+    @ManyToMany(mappedBy = "goodsEntitySet")
     private Set<OrderEntity> orderEntities = new HashSet<>();
 }

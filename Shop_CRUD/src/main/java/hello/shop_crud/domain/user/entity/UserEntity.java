@@ -31,7 +31,7 @@ public class UserEntity {
     @Column(nullable = false)
     private String email;
 
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "userEntity")
     private Set<OrderEntity> orders = new HashSet<>();
 
 }

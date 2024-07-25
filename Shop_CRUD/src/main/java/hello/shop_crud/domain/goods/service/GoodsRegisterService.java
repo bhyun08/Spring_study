@@ -13,9 +13,9 @@ public class GoodsRegisterService {
 
     public void register(GoodsRegisterRequest goodsRegisterRequest) {
         goodsRepository.save(GoodsEntity.builder()
-                        .goodsName(goodsRegisterRequest.getGoodsName())
-                        .goodsDesc(goodsRegisterRequest.getGoodsDesc())
-                        .goodsPrice(goodsRegisterRequest.getGoodsPrice())
+                        .name(goodsRegisterRequest.getGoodsName())
+                        .description(goodsRegisterRequest.getGoodsDesc())
+                        .price(goodsRegisterRequest.getGoodsPrice())
                 .build());
     }
 }

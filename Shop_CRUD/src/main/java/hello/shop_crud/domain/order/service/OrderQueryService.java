@@ -36,8 +36,8 @@ public class OrderQueryService {
     }
     private GoodsResponse mapToGoodsResponse(GoodsEntity goodsEntity) {
         return new GoodsResponse(
-                goodsEntity.getGoodsId(),
-                goodsEntity.getGoodsName(),
-                goodsEntity.getGoodsPrice());
+                goodsEntity.getId(),
+                goodsEntity.getName(),
+                goodsEntity.getPrice());
     }
 }

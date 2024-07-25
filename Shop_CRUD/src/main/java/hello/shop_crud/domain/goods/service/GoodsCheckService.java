@@ -15,6 +15,6 @@ public class GoodsCheckService {
     public GoodsCheckResponse check(GoodsCheckRequest goodsCheckRequest) {
         GoodsEntity goodsEntity = goodsRepository.findById(goodsCheckRequest.getId())
                 .orElseThrow(()-> new IllegalArgumentException("Goods Not Found"));
-        return new GoodsCheckResponse(goodsEntity.getGoodsName(), goodsEntity.getGoodsDesc(), goodsEntity.getGoodsPrice());
+        return new GoodsCheckResponse(goodsEntity.getName(), goodsEntity.getDescription(), goodsEntity.getPrice());
     }
 }

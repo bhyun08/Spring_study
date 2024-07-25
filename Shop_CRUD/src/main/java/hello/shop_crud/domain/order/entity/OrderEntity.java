@@ -21,14 +21,14 @@ public class OrderEntity {
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name = "userId")
+    @JoinColumn(name = "user_id")
     private UserEntity userEntity;
 
     @ManyToMany
     @JoinTable(
-            name = "orderGoods",
-            joinColumns = @JoinColumn(name = "orderId"),
-            inverseJoinColumns = @JoinColumn(name = "goodsId")
+            name = "order_goods",
+            joinColumns = @JoinColumn(name = "order_id"),
+            inverseJoinColumns = @JoinColumn(name = "goods_id")
     )
     private Set<GoodsEntity> goodsEntitySet = new HashSet<>();
 }

@@ -16,8 +16,8 @@ public class GoodsUpdateService {
     public void update(GoodsUpdateRequest updateRequest) {
         GoodsEntity goodsEntity = goodsRepository.findById(updateRequest.getId())
                 .orElseThrow(()-> new IllegalArgumentException("Goods Not Found"));
-        goodsEntity.setGoodsName(updateRequest.getGoodsName());
-        goodsEntity.setGoodsPrice(updateRequest.getGoodsPrice());
-        goodsEntity.setGoodsDesc(updateRequest.getGoodsDesc());
+        goodsEntity.setName(updateRequest.getGoodsName());
+        goodsEntity.setPrice(updateRequest.getGoodsPrice());
+        goodsEntity.setDescription(updateRequest.getGoodsDesc());
     }
 }
