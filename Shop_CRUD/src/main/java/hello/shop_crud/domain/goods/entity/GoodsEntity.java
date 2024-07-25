@@ -1,7 +1,11 @@
 package hello.shop_crud.domain.goods.entity;
 
+import hello.shop_crud.domain.order.entity.OrderEntity;
 import jakarta.persistence.*;
 import lombok.*;
+
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Getter
@@ -23,4 +27,7 @@ public class GoodsEntity {
 
     @Column(nullable = false)
     private int goodsPrice;
+
+    @ManyToMany(mappedBy = "goods")
+    private Set<OrderEntity> orderEntities = new HashSet<>();
 }
