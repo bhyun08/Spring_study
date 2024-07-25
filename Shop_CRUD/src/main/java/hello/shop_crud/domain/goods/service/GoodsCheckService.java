@@ -1,6 +1,6 @@
 package hello.shop_crud.domain.goods.service;
 
-import hello.shop_crud.domain.goods.dto.dto.response.CheckResponse;
+import hello.shop_crud.domain.goods.dto.response.CheckResponse;
 import hello.shop_crud.domain.goods.dto.request.CheckRequest;
 import hello.shop_crud.domain.goods.entity.GoodsEntity;
 import hello.shop_crud.domain.goods.repository.GoodsRepository;

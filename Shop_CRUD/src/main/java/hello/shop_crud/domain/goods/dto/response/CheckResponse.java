@@ -1,4 +1,4 @@
-package hello.shop_crud.domain.goods.dto.dto.response;
+package hello.shop_crud.domain.goods.dto.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
