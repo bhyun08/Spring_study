@@ -9,7 +9,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-public class SignUpRequest {
+public class UserSignUpRequest {
 
     @Size(min = 3, max = 20)
     @NotBlank

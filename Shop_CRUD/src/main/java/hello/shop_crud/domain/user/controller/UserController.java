@@ -1,6 +1,6 @@
 package hello.shop_crud.domain.user.controller;
 
-import hello.shop_crud.domain.user.dto.request.SignUpRequest;
+import hello.shop_crud.domain.user.dto.request.UserSignUpRequest;
 import hello.shop_crud.domain.user.dto.request.UserUpdateRequest;
 import hello.shop_crud.domain.user.service.UserSignUpService;
 import hello.shop_crud.domain.user.service.UserUpdateService;
@@ -19,8 +19,8 @@ public class UserController {
     private final UserUpdateService userUpdateService;
 
     @PostMapping("/signup")
-    public void signUp(@RequestBody SignUpRequest signUpRequest) {
-        userSignUpService.signUp(signUpRequest);
+    public void signUp(@RequestBody UserSignUpRequest userSignUpRequest) {
+        userSignUpService.signUp(userSignUpRequest);
     }
 
     @PatchMapping("/update")
